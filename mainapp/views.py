@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from rest_framework.viewsets import ModelViewSet
+from .models import Perfume
+from .serializers import PerfumeSerializer
 
-# Create your views here.
+class PerfumeViewSet(ModelViewSet):
+    queryset = Perfume.objects.all()
+    serializer_class = PerfumeSerializer
