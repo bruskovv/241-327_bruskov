@@ -5,3 +5,4 @@ class PerfumeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Perfume
         fields = '__all__'
+        huin
