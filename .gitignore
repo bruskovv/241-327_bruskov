@@ -3,6 +3,8 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.pyc
+objectgenerator.py
+*.iml
 
 # Virtualenv
 venv/
@@ -33,3 +35,4 @@ Thumbs.db
 # Environment
 .env
 .env.local
+.gitignore
