@@ -30,6 +30,12 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
+      - name: Restore nginx certs
+        run: |
+          mkdir -p lab2/nginx/certs
+          echo "${{ secrets.NGINX_CERT }}" | base64 -d > lab2/nginx/certs/lab2.crt
+          echo "${{ secrets.NGINX_KEY }}"  | base64 -d > lab2/nginx/certs/lab2.key
+
       - name: Build nginx image
         uses: docker/build-push-action@v5
         with:
