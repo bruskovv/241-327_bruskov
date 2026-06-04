@@ -22,7 +22,7 @@ jobs:
       - name: Build backend image
         uses: docker/build-push-action@v5
         with:
-          context: .
+          context: ./lab2/backend
           file: ./lab2/backend/Dockerfile
           push: false
           tags: backend:latest
