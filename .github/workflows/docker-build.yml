@@ -39,7 +39,7 @@ jobs:
       - name: Build nginx image
         uses: docker/build-push-action@v5
         with:
-          context: .
+          context: ./lab2/nginx
           file: ./lab2/nginx/Dockerfile
           push: false
           tags: nginx-custom:latest
